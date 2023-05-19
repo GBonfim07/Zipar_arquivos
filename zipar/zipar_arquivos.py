@@ -11,11 +11,11 @@ def compactar_pasta(pasta, destino):
                 zipf.write(file_path, os.path.relpath(file_path, pasta))
 
 # Ler os IDs do Excel usando pandas
-caminho_planilha = r'C:\Users\gubon\OneDrive\Área de Trabalho\teste_excel.xlsx'  # Substitua pelo caminho correto da sua planilha
+caminho_planilha = r'C:\'  # Substitua pelo caminho correto da sua planilha
 dados = pd.read_excel(caminho_planilha)
 lista_ids = dados[1].tolist()  # Supondo que o nome da coluna com os IDs seja 'ID'
 
-pasta_principal = r'C:\Users\gubon\OneDrive\Área de Trabalho\pasta_teste'  # Substitua pelo caminho correto da sua pasta principal
+pasta_principal = r'C:'  # Substitua pelo caminho correto da sua pasta principal
 
 for id in lista_ids:
     pasta_id = os.path.join(pasta_principal, str(id))
